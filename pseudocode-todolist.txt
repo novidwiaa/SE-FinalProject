@@ -1,0 +1,36 @@
+PROGRAM To-do List App
+
+DECLARE "task" with array
+
+PRINT("1. View list")
+PRINT("2. Add list")
+PRINT("3. Remove list")
+
+choice = input("Enter your choice : ")
+
+IF choice == "1"
+	DECLARE "view" with number
+	STORE "view" with "1"
+
+	While view <= array.length(task)
+		PRINT(view, "-", task[view])
+	END WHILE
+
+ELSE choice == "2"
+	PRINT("Current List")
+	DECLARE "add" with string
+
+	STORE "add" with "Enter new task item"
+	APPEND "task" with "add"
+	PRINT "The task has been added"
+
+ELSE choice == "3"
+	PRINT("Current list")
+
+	DECLARE "remove" with number
+	STORE "remove" with "The number of your item want to delete" - 1
+	REMOVE INDEX in "task" with "remove"
+	PRINT "The task has been removed from your list"
+
+
+
